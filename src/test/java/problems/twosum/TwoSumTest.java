@@ -46,14 +46,23 @@ public class TwoSumTest {
 
     private static Stream<Arguments> cases() {
         return Stream.of(
+                // pair at the start
                 Arguments.of(new int[]{2, 7, 11, 15}, 9, new int[]{0, 1}),
+                // duplicate values form the pair
                 Arguments.of(new int[]{3, 3}, 6, new int[]{0, 1}),
+                // same element must not be used twice (3 + 3)
                 Arguments.of(new int[]{3, 2, 4}, 6, new int[]{1, 2}),
+                // pair appears in reverse index order
                 Arguments.of(new int[]{3, 5, 1, 7, 5, 2, 1}, 9, new int[]{5, 3}),
+                // negative and positive cancel out
                 Arguments.of(new int[]{-3, 4, 3, 90}, 0, new int[]{0, 2}),
+                // all negatives
                 Arguments.of(new int[]{-1, -2, -3, -4, -5}, -8, new int[]{2, 4}),
+                // zeros at both ends
                 Arguments.of(new int[]{0, 4, 3, 0}, 0, new int[]{0, 3}),
+                // pair at the end
                 Arguments.of(new int[]{1, 2, 3, 4, 10, 20}, 30, new int[]{4, 5}),
+                // 10^4 elements, single planted pair
                 largeData()
         );
     }
