@@ -9,11 +9,10 @@ public class AddTwoNumbers {
         ListNode tail = dummy;
 
         int carry = 0;
-        int sum = 0;
         while (l1 != null || l2 != null || carry != 0) {
-            int a = l1 == null ? 0 : l1.val;
-            int b = l2 == null ? 0 : l2.val;
-            sum = a + b + carry;
+            int a = l1 != null ? l1.val : 0;
+            int b = l2 != null ? l2.val : 0;
+            int sum = a + b + carry;
 
             tail.next = new ListNode(sum % 10);
             carry = sum / 10;

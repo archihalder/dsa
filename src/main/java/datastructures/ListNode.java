@@ -23,7 +23,7 @@ public class ListNode {
     public static ListNode of(int... vals) {
         ListNode dummy = new ListNode(0);
         ListNode curr = dummy;
-        for (int v: vals) {
+        for (int v : vals) {
             curr.next = new ListNode(v);
             curr = curr.next;
         }
