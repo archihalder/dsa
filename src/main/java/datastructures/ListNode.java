@@ -37,4 +37,17 @@ public class ListNode {
         }
         return out.stream().mapToInt(Integer::intValue).toArray();
     }
+
+    @Override
+    public String toString() {
+        StringBuilder list = new StringBuilder("[");
+        for (ListNode n = this; n != null; n = n.next) {
+            list.append(n.val);
+            if (n.next != null) {
+                list.append(", ");
+            }
+        }
+        list.append("]");
+        return list.toString();
+    }
 }
