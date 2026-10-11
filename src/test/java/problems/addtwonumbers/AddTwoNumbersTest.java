@@ -20,6 +20,7 @@ public class AddTwoNumbersTest {
 
     private static Stream<Arguments> cases() {
         return Stream.of(
+                // sample example
                 Arguments.of(new int[]{2, 4, 3}, new int[]{5, 6, 4}, new int[]{7, 0, 8}),
                 // both zero
                 Arguments.of(new int[]{0}, new int[]{0}, new int[]{0}),
